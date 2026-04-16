@@ -1,9 +1,11 @@
 package de.lubowiecki;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 // POJO - Plain Old Java Object
-public class Produkt {
+// Damit ein Objekt serialisiert werden KANN, muss die Klasse Serializable implementieren!!!!
+public class Produkt implements Serializable {
 
     private String name;
     private String beschreibung;
