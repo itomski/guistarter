@@ -6,10 +6,10 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.lubowiecki.MainController">
    <children>
@@ -21,7 +21,7 @@
 
       <Spinner fx:id="anzahl" layoutX="24.0" layoutY="251.0" prefHeight="25.0" prefWidth="200.0">
          <valueFactory>
-            <SpinnerValueFactory.IntegerSpinnerValueFactory min="0" max="100" initialValue="0" amountToStepBy="1" />
+            <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="0" max="100" min="0" />
          </valueFactory>
       </Spinner>
 
@@ -31,6 +31,6 @@
       <DatePicker fx:id="imBestandSeit" layoutX="25.0" layoutY="358.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="25.0" />
       <Button layoutX="151.0" layoutY="391.0" mnemonicParsing="false" onAction="#save" text="Speichern" />
       <Separator layoutX="251.0" layoutY="98.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="25.0" />
-      <ListView fx:id="produkte" layoutX="281.0" layoutY="25.0" prefHeight="395.0" prefWidth="294.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="30.0" />
+      <ListView fx:id="produkte" layoutX="281.0" layoutY="25.0" onKeyPressed="#deleteProdukt" prefHeight="395.0" prefWidth="294.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="30.0" />
    </children>
 </AnchorPane>

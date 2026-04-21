@@ -2,11 +2,13 @@ package de.lubowiecki;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.UUID;
 
 // POJO - Plain Old Java Object
 // Damit ein Objekt serialisiert werden KANN, muss die Klasse Serializable implementieren!!!!
 public class Produkt implements Serializable {
 
+    private int id;
     private String name;
     private String beschreibung;
     private int anzahl;
@@ -26,6 +28,14 @@ public class Produkt implements Serializable {
         this.anzahl = anzahl;
         this.preis = preis;
         this.imBestandSeit = imBestandSeit;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -71,6 +81,7 @@ public class Produkt implements Serializable {
     @Override
     public String toString() {
         return new StringBuilder()
+            .append(id).append("\n")
             .append(name).append("\n")
             .append(beschreibung).append("\n")
             .append(anzahl).append("\n")

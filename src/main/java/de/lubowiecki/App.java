@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.UUID;
 
 /**
  * JavaFX App
@@ -20,6 +21,7 @@ public class App extends Application {
         scene = new Scene(loadFXML("main-view"));
         stage.setScene(scene);
         stage.show();
+
     }
 
     static void setRoot(String fxml) throws IOException {
